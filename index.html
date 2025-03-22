@@ -1,0 +1,158 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Mattie Niznik @ Princeton</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/site.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <div id="app">
+      <nav class="navbar navbar-expand-md navbar-dark fixed-top">
+        <div class="container-fluid">
+          <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-nav-dropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Navigation Menu Toggle">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <a class="navbar-brand" onclick="show('home')">Mattie Niznik @ Princeton</a>
+          <div id="navbar-nav-dropdown" class="collapse navbar-collapse">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link" onclick="show('cv')">CV</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" onclick="show('research')">Research</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" onclick="show('writing')">Writing</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <div class="container">
+        <div class="row">
+
+          <div id="content-home" class="col-xl-9 content">
+            <div class="row">
+              <div class="col-xl-3">
+                <img src="img/mattiePhoto250.png" alt="A photo of Mattie">
+              </div>
+              <div class="col-xl-1"></div>
+              <div id="mattieInfo" class="col-xl-8">
+                <h1>Mattie Niznik, PhD</h1>
+                <h2>Research Software & Programming Analyst</h2>
+                <h2><a href="https://researchcomputing.princeton.edu/about/about-picscie">PICSciE</a> at Princeton University</h2>
+                <hr>
+                <div class="mattie-who">
+                  <p class="fw-bold">Who am I?</p>
+                  <ul class="mattie-who-list">
+                    <li class="python">Python advocate (but open to all other options)</li>
+                    <li class="instructor">Willing mentor and instructor in all things tech</li>
+                    <li class="simulation">Large language model and numerical simulation enthusiast</li>
+                    <li class="web">Web and application developer with nearly a decade of experience</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div id="content-cv" class="col-xl-9 content d-none">
+            <h1>Mattie Niznik</h1>
+            <p class="cv-email">mattie.niznik@princeton.edu</p>
+            <p class="font-note">(<strong>Note:</strong> Some works and degrees still use <em>Matthew J. Niznik</em>)</p>
+
+            <h2>Education</h2>
+            <p class="text-start">
+              <span class="fw-bold cv-title">PhD in Atmospheric Science</span><br>
+              Rutgers University, 2010-2015<br>
+              <a href="https://rucore.libraries.rutgers.edu/rutgers-lib/47489/">Dissertation</a>
+            </p>
+            <p class="text-start">
+              <span class="fw-bold cv-title">BS in Computer Science and Meteorology</span><br>
+              University of Miami, 2006-2010
+            </p>
+
+            <h2>Positions</h2>
+            <p class="text-start">
+              <span class="fw-bold cv-title">Research Software & Programming Analyst</span><br>
+              Princeton University, 2023<br>
+              <span class="cv-desc">▪ Assisting and instructing users in the use of HPC clusters</span>
+            </p>
+            <p class="text-start">
+              <span class="fw-bold cv-title">Business Analyst III</span><br>
+              Colorado Department of Revenue, 2022-2023<br>
+              <span class="cv-desc">▪ Tested and refined requirements for large revenue applications</span>
+            </p>
+            <p class="text-start">
+              <span class="fw-bold cv-title">Research Software Engineer</span><br>
+              Colorado State University, 2020-2022<br>
+              <span class="cv-desc">▪ Supported researchers in a web visualization capacity</span>
+            </p>
+            <p class="text-start">
+              <span class="fw-bold cv-title">Application Programmer</span><br>
+              Stowers Institute of Medical Research, 2017-2020<br>
+              <span class="cv-desc">▪ Designed and maintained a custom LIMS as part of a large team</span>
+            </p>
+            <p class="text-start">
+              <span class="fw-bold cv-title">Application Developer</span><br>
+              Rutgers University, 2016-2017<br>
+              <span class="cv-desc">▪ Modernized and designed new custom web applications</span>
+            </p>
+            <p class="text-start">
+              <span class="fw-bold cv-title">Post Doctoral Associate</span><br>
+              University of Miami, 2015-2016<br>
+              <span class="cv-desc">▪ Built tools for innovative dataset exploration</span>
+            </p>
+
+            <h2>Publications</h2>
+            <p class="text-start cv-pubs">
+              ▪ Noh, Y.-J., Haynes, J.M., Miller, S.D., Seaman, C.J., Heidinger, A.K., Weinrich, J., Kulie, M.S., Niznik, M., and Daub, B.J., 2022:
+              A Framework for Satellite-Based 3D Cloud Data: An Overview of the VIIRS Cloud Base Height Retrieval and User Engagement for Aviation Applications.
+              Remote Sensing, 14, 5524, doi: <a href="https://doi.org/10.3390/rs14215524">10.3390/rs14215524</a>.<br><br>
+              ▪ Lintner, B. R., B. Langenbrunner, J. D. Neelin, B. T. Anderson, M. Niznik, G. Li, and S.-P. Xie, 2016:
+              Characterizing CMIP5 model spread in simulated rainfall in the Pacific Intertropical Convergence and South Pacific Convergence Zones.
+              Journal of Geophysical Research, Atmospheres, 121, 11590–11607, doi: <a href="https://doi.org/10.1002/2016JD025284">10.1002/2016JD025284</a>.<br><br>
+              ▪ Niznik, M., B. R. Lintner, A. J. Matthews, and M. J. Widlansky, 2015:
+              The Role of Tropical–Extratropical Interaction and Synoptic Variability in Maintaining the South Pacific Convergence Zone in CMIP5 Models.
+              Journal of Climate, 28, 3353–3374, doi: <a href="https://doi.org/10.1175/JCLI-D-14-00527.1">10.1175/JCLI-D-14-00527.1</a>.<br><br>
+              ▪ Niznik, M. and B. R. Lintner, 2013:
+              Circulation, moisture, and precipitation relationships along the South Pacific Convergence Zone in reanalyses and CMIP5 models.
+              Journal of Climate, 26, 10174–10192, doi: <a href="https://doi.org/10.1175/JCLI-D-13-00263.1">10.1175/JCLI-D-13-00263.1</a>.<br><br>
+              ▪ Lintner, B. R., M. Biasutti, N. S. Diffenbaugh, J.-E. Lee, M. Niznik, and K. L. Findell, 2012:
+              Amplification of wet and dry month occurrence over tropical land regions in response to global warming.
+              Journal of Geophysical Research, 117, D11106, doi: <a href="https://doi.org/10.1029/2012JD017499">10.1029/2012JD017499</a>.
+            </p>
+          </div>
+
+          <div id="content-research" class="col-xl-9 content d-none">
+            <p class="more-soon">More soon... 👀</p>
+          </div>
+
+          <div id="content-writing" class="col-xl-9 content d-none">
+            <p class="more-soon">More soon... 👀</p>
+          </div>
+
+          <div class="col-md-3">
+            <hr class="hidden-md-up">
+            <h2>Let's Connect!</h2>
+            <a href="https://linkedin.com/in/importmattie">LinkedIn</a><br>
+            <a href="https://github.com/niznik-dev">GitHub</a><br>
+            <a href="https://scholar.google.com/citations?user=6buaqVsAAAAJ">Google Scholar</a><br>
+            <a href="https://orcid.org/0000-0003-2904-3146">ORCiD</a>
+
+            <hr>
+            <h2>Resources</h2>
+            <a href="https://researchcomputing.princeton.edu/">Princeton Research Computing</a><br>
+            <a href="https://researchcomputing.princeton.edu/support/help-sessions">Weekly Help Sessions</a><br>
+            <a href="https://us-rse.org/">US-RSE</a>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+    <script src="js/index.js"></script>
+  </body>
+</html>

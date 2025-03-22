@@ -1,0 +1,127 @@
+:root {
+  --lightestPrOrange: #FFAA81;
+  --lightPrOrange: #FF8F5A;
+  --prOrange: #FF671F;
+  --darkGray: #222222;
+}
+
+body {
+  background-color: var(--darkGray);
+  color: var(--prOrange);
+  padding: 75px;
+}
+
+a {
+  color: white;
+}
+
+a:hover {
+  cursor: pointer;
+  color: var(--prOrange);
+}
+
+.content {
+  color: var(--prOrange);
+  margin-top: 20px;
+  text-align: center;
+}
+
+.navbar {
+  background-color: var(--prOrange) !important;
+  border-bottom: 2px solid white;
+}
+
+.navbar-brand,
+.nav-item .nav-link {
+  color: white;
+}
+
+.navbar-brand:hover,
+.nav-item .nav-link:hover {
+  color: var(--darkGray);
+}
+
+.navbar-toggler {
+  background-color: var(--lightestPrOrange);
+}
+
+h1 {
+  font-size: 250%;
+}
+
+h2 {
+  color: var(--lightPrOrange);
+  font-size: 150%;
+}
+
+.mattie-who {
+  color: var(--lightestPrOrange);
+  margin: 0 auto;
+}
+
+.mattie-who p {
+  font-size: 125%;
+}
+
+.mattie-who ul {
+  text-align: left;
+}
+
+.mattie-who-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.mattie-who-list li {
+  padding-left: 1rem;
+}
+
+.mattie-who-list .python::before {
+  content: "🐍 ";
+}
+
+.mattie-who-list .simulation::before {
+  content: "🎲 ";
+}
+
+.mattie-who-list .web::before {
+  content: "🕸️ ";
+}
+
+.mattie-who-list .instructor::before {
+  content: "📚 ";
+}
+
+.more-soon {
+  font-size: 125%;
+}
+
+#content-cv h1 {
+  margin-bottom: -4px;
+}
+
+#content-cv h2 {
+  color: white;
+}
+
+.cv-email {
+  margin: 0;
+}
+
+.font-note {
+  color: var(--lightestPrOrange);
+  font-size: 75%;
+}
+
+#content-cv p {
+  color: var(--lightestPrOrange);
+}
+
+.cv-title {
+  color: var(--lightPrOrange);
+}
+
+.cv-desc {
+  color: white;
+}
