@@ -1,4 +1,4 @@
-sections = ['home', 'cv', 'research', 'writing'];
+sections = ['home', 'cv', 'research'];
 
 function hideAll() {
   sections.forEach(e => document.getElementById('content-' + e).classList.add('d-none'));
