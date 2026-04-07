@@ -3,6 +3,8 @@
   --lightPrOrange: #FF8F5A;
   --prOrange: #FF671F;
   --darkGray: #222222;
+  --mint: #6ECEB2;
+  --midnightGreen: #0A7A8A;
 }
 
 body {
@@ -67,6 +69,36 @@ h2 {
   text-align: left;
 }
 
+.outside-work-header {
+  margin-top: 2rem;
+  color: var(--mint);
+}
+
+.outside-work-subtitle {
+  font-size: 0.75rem !important;
+  font-style: italic;
+  margin-top: -1.3rem;
+  margin-bottom: 0.5rem;
+  color: var(--mint);
+}
+
+.smirk-emoji {
+  font-size: 0.65rem;
+  font-style: normal;
+}
+
+.mattie-who-list a {
+  color: var(--lightestPrOrange);
+  text-decoration: none;
+  font-size: 0.9em;
+}
+
+.mattie-who-list a:hover {
+  color: white;
+  transform: scale(1.1);
+  display: inline-block;
+}
+
 .mattie-who-list {
   list-style: none;
   margin: 0;
@@ -77,12 +109,20 @@ h2 {
   padding-left: 1rem;
 }
 
+.mattie-who-list.work li {
+  color: var(--lightestPrOrange);
+}
+
+.mattie-who-list.outside li {
+  color: var(--mint);
+}
+
 .mattie-who-list .python::before {
   content: "🐍 ";
 }
 
 .mattie-who-list .simulation::before {
-  content: "🎲 ";
+  content: "🤖 ";
 }
 
 .mattie-who-list .web::before {
@@ -91,6 +131,38 @@ h2 {
 
 .mattie-who-list .instructor::before {
   content: "📚 ";
+}
+
+.mattie-who-list .cat::before {
+  content: "🐈 ";
+}
+
+.mattie-who-list .cello::before {
+  content: "🎹 ";
+}
+
+.mattie-who-list .sports::before {
+  content: "🏒 ";
+}
+
+.mattie-who-list .rpg::before {
+  content: "🎲 ";
+}
+
+.mattie-who-list .reading::before {
+  content: "📖 ";
+}
+
+.mattie-who-list.outside .birds {
+  font-size: 0.75rem;
+  font-style: italic;
+  text-align: center;
+  padding-left: 0;
+  color: var(--midnightGreen) !important;
+}
+
+.mattie-who-list .birds::before {
+  content: "";
 }
 
 .more-soon {
@@ -123,5 +195,62 @@ h2 {
 }
 
 .cv-desc {
+  color: white;
+}
+
+/* Research Cards */
+.research-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.research-card {
+  background-color: rgba(255, 103, 31, 0.1);
+  border: 2px solid var(--prOrange);
+  border-radius: 0.5rem;
+  padding: 1.5rem 1.5rem 0.75rem 1.5rem;
+  flex: 1 1 300px;
+  max-width: 100%;
+  text-align: left;
+  transition: transform 0.2s, border-color 0.2s;
+}
+
+.research-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--mint);
+}
+
+.card-image {
+  width: 200px;
+  height: auto;
+  border-radius: 0.5rem;
+  float: left;
+  margin-right: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.card-title {
+  color: var(--lightPrOrange);
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.card-description {
+  color: var(--lightestPrOrange);
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+.card-link {
+  color: var(--prOrange);
+  text-decoration: none;
+  font-weight: bold;
+  display: inline-block;
+  margin-top: 0.5rem;
+}
+
+.card-link:hover {
   color: white;
 }
