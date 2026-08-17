@@ -1,10 +1,12 @@
-sections = ['home', 'cv', 'research'];
+const sections = ['home', 'cv', 'research'];
 
-function hideAll() {
-  sections.forEach(e => document.getElementById('content-' + e).classList.add('d-none'));
+function route() {
+  const section = location.hash.slice(1);
+  const target = sections.includes(section) ? section : 'home';
+  sections.forEach(s =>
+    document.getElementById('content-' + s).classList.toggle('d-none', s !== target)
+  );
 }
 
-function show(sectionName) {
-  hideAll();
-  document.getElementById('content-' + sectionName).classList.remove('d-none');
-}
+window.addEventListener('hashchange', route);
+route();
