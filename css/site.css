@@ -10,7 +10,13 @@
 body {
   background-color: var(--darkGray);
   color: var(--prOrange);
-  padding: 75px;
+  padding: 75px 15px 30px;
+}
+
+@media (min-width: 768px) {
+  body {
+    padding: 75px;
+  }
 }
 
 a {
