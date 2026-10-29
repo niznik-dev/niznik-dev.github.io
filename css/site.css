@@ -239,11 +239,34 @@ h2 {
   font-style: italic;
 }
 
-/* A little putty-gray TV of the era: rabbit ears on top, knobs and a speaker grille on the right */
+/* The clips play on one of two TVs, picked per page load (data-style on .project-tv).
+   Each style draws its body on .project-tv, extras on its ::before/::after, and up to three .tv-part slots. */
 .project-tv {
   position: relative;
   width: max-content;
   margin: 2rem auto 0;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.45);
+}
+
+.project-tv::before,
+.project-tv::after,
+.tv-part {
+  content: "";
+  position: absolute;
+}
+
+.tv-part {
+  display: none;
+}
+
+.project-crt {
+  position: relative;
+  overflow: hidden;
+  background: #000;
+}
+
+/* 📺 A putty-gray TV of the era: rabbit ears on top, knobs and a speaker grille on the right */
+.project-tv[data-style="crt"] {
   padding: 8px 30px 8px 8px;
   border: 2px solid #8E8A7E;
   border-radius: 12px;
@@ -252,13 +275,10 @@ h2 {
     radial-gradient(circle at calc(100% - 15px) 42px, #4A4A4A 0 4px, #2A2A2A 5px, transparent 6px),
     repeating-linear-gradient(#9D998D 0 2px, transparent 2px 5px) calc(100% - 9px) 60px / 12px 30px no-repeat,
     linear-gradient(#D3CFC2, #BDB8AA);
-  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.45);
 }
 
-.project-tv::before,
-.project-tv::after {
-  content: "";
-  position: absolute;
+.project-tv[data-style="crt"]::before,
+.project-tv[data-style="crt"]::after {
   bottom: 100%;
   left: calc(50% - 12px);
   width: 2px;
@@ -267,20 +287,95 @@ h2 {
   transform-origin: bottom center;
 }
 
-.project-tv::before {
+.project-tv[data-style="crt"]::before {
   transform: rotate(-28deg);
 }
 
-.project-tv::after {
+.project-tv[data-style="crt"]::after {
   transform: rotate(28deg);
 }
 
-.project-crt {
-  position: relative;
-  overflow: hidden;
-  background: #000;
+.project-tv[data-style="crt"] .project-crt {
   border: 3px solid #2A2A2A;
   border-radius: 12px / 16px;
+}
+
+/* 🎮 A Game Gear wearing its TV Tuner: D-pad left, buttons and Start right, tuner on top with its
+   antenna swung out nearly flat to the right, so it doesn't push the page down */
+.project-tv[data-style="gamegear"] {
+  cursor: pointer;
+  margin-top: 2.5rem;
+  padding: 12px 72px 24px;
+  border: 2px solid #0E0E10;
+  border-radius: 22px 22px 40px 40px / 20px 20px 34px 34px;
+  background: linear-gradient(#38383C, #222225);
+}
+
+.project-tv[data-style="gamegear"] .project-crt {
+  border: 7px solid #44444A;
+  border-bottom-width: 14px;
+  border-radius: 6px;
+}
+
+.project-tv[data-style="gamegear"] .tv-part {
+  display: block;
+}
+
+.project-tv[data-style="gamegear"] .tv-part-a {
+  left: 16px;
+  top: calc(50% - 22px);
+  width: 44px;
+  height: 44px;
+  border: 2px solid #5A5A61;
+  border-radius: 50%;
+  background:
+    linear-gradient(#0E0E10, #0E0E10) center / 12px 32px no-repeat,
+    linear-gradient(#0E0E10, #0E0E10) center / 32px 12px no-repeat,
+    #1B1B1E;
+}
+
+.project-tv[data-style="gamegear"] .tv-part-b {
+  right: 14px;
+  top: calc(50% - 6px);
+  width: 44px;
+  height: 30px;
+  background:
+    radial-gradient(circle at 11px 20px, #141416 0 8px, #444 9px, transparent 10px),
+    radial-gradient(circle at 32px 10px, #141416 0 8px, #444 9px, transparent 10px);
+}
+
+.project-tv[data-style="gamegear"] .tv-part-c {
+  bottom: 100%;
+  left: calc(50% - 42px);
+  width: 84px;
+  height: 16px;
+  border: 2px solid #0E0E10;
+  border-bottom: none;
+  border-radius: 5px 5px 0 0;
+  background:
+    radial-gradient(circle at 68px 8px, #9A9AA0 0 3px, #555 4px, transparent 5px),
+    linear-gradient(#4C4C52, #2E2E33);
+}
+
+.project-tv[data-style="gamegear"]::before {
+  right: 50px;
+  top: 22px;
+  width: 13px;
+  height: 7px;
+  border-radius: 4px;
+  background: #3B5BA9;
+  transform: rotate(-45deg);
+}
+
+.project-tv[data-style="gamegear"]::after {
+  bottom: calc(100% + 16px);
+  left: calc(50% + 34px);
+  width: 3px;
+  height: 64px;
+  border-radius: 2px;
+  background: linear-gradient(#E4E4E8, #8E8E96);
+  transform: rotate(80deg);
+  transform-origin: bottom center;
 }
 
 /* Scan lines plus a little edge darkening, laid over whatever is on screen */

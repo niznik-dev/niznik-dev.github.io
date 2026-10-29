@@ -71,5 +71,17 @@ function route() {
   if (target === 'projects') renderProjects(sub); else stopSnow();
 }
 
+// A different TV on each page load; ?tv=crt|gamegear pins one for previewing.
+const TV_STYLES = ['crt', 'gamegear'];
+const pinnedTv = new URLSearchParams(location.search).get('tv');
+const tv = document.getElementById('project-tv');
+tv.dataset.style = TV_STYLES.includes(pinnedTv) ? pinnedTv : TV_STYLES[Math.floor(Math.random() * TV_STYLES.length)];
+
+// Mouse-only easter egg: the Game Gear links to the real TV Tuner (the TV itself stays decorative).
+if (tv.dataset.style === 'gamegear') {
+  tv.title = 'The SEGA Game Gear TV Tuner';
+  tv.addEventListener('click', () => window.open('https://segaretro.org/TV_Tuner', '_blank', 'noopener'));
+}
+
 window.addEventListener('hashchange', route);
 route();
