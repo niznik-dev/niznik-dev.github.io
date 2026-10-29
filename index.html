@@ -34,7 +34,7 @@
                 <a class="nav-link" href="#cv">CV</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#research">Research</a>
+                <a class="nav-link" href="#projects">Projects</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="/blog/">Blog</a>
@@ -147,16 +147,18 @@
             </p>
           </div>
 
-          <div id="content-research" class="col-xl-9 content d-none">
-            <h1>Research & Projects</h1>
-            <div class="research-cards">
-              <div class="research-card">
-                <img src="img/cruijff_kit_logo.png" alt="cruijff_kit logo" class="card-image" width="1024" height="1024">
-                <h3 class="card-title">cruijff_kit</h3>
-                <p class="card-description">A Python toolkit for conducting social research with large language models on HPC clusters. Design experiments, scaffold configurations, submit jobs, and analyze results—all from a unified workflow.</p>
-                <a href="https://github.com/niznik-dev/cruijff_kit" target="_blank" class="card-link">View on GitHub →</a>
+          <div id="content-projects" class="col-xl-9 content d-none">
+            <h1>Projects</h1>
+            <nav class="project-filters" id="project-filters" aria-label="Filter projects"></nav>
+            <p class="project-blurb" id="project-blurb"></p>
+            <div class="project-tv" id="project-tv" aria-hidden="true" hidden>
+              <div class="project-crt">
+                <img class="project-screen" id="project-gif" alt="">
+                <canvas class="project-screen" id="project-snow" width="64" height="48"></canvas>
               </div>
             </div>
+            <div class="project-cards" id="project-cards"></div>
+            <p class="project-more">Everything else lives on <a href="https://github.com/niznik-dev">GitHub →</a></p>
           </div>
 
 
@@ -184,6 +186,7 @@
       </div>
 
     </div>
+    <script src="js/projects.js"></script>
     <script src="js/index.js"></script>
   </body>
 </html>
