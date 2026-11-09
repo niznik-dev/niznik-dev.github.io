@@ -21,6 +21,14 @@ const PROJECTS = [
     repo: 'https://github.com/niznik-dev/local-llm-elevator',
   },
   {
+    name: 'slurm-gridlock',
+    icon: '🚦',
+    cats: ['learn', 'tools'],
+    description: 'Why is my Slurm job still waiting? Run one command, load the report, and see your fairshare standing, each job’s place in line, and what you can do about it, all as highway traffic. Everything stays in your browser.',
+    live: 'https://niznik-dev.github.io/slurm-gridlock/',
+    repo: 'https://github.com/niznik-dev/slurm-gridlock',
+  },
+  {
     name: 'cruijff_kit',
     image: 'img/cruijff_kit_logo.png',
     cats: ['tools'],
