@@ -47,6 +47,7 @@ function renderProjects(filter) {
 
   document.getElementById('project-cards').innerHTML = PROJECTS
     .filter(p => active === 'all' || p.cats.includes(active))
+    .sort((a, b) => (b.rank ?? 0) - (a.rank ?? 0))
     .map(p => {
       const art = p.image
         ? `<img src="${p.image}" alt="" class="project-icon" width="64" height="64">`
