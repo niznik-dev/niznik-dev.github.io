@@ -32,6 +32,15 @@ const PROJECTS = [
     repo: 'https://github.com/niznik-dev/slurm-gridlock',
   },
   {
+    name: 'hpc-cluster-tour',
+    rank: 4,
+    icon: '🗄️',
+    cats: ['learn'],
+    description: 'What does an HPC cluster actually look like? Walk into the data hall, pick a rack, pull a node, and lift the lid, from CPU sockets and DIMMs to NVLink bridges and Grace Hopper. Princeton’s Della is the example throughout.',
+    live: 'https://niznik-dev.github.io/hpc-cluster-tour/',
+    repo: 'https://github.com/niznik-dev/hpc-cluster-tour',
+  },
+  {
     name: 'cruijff_kit',
     rank: 2,
     image: 'img/cruijff_kit_logo.png',
